@@ -282,10 +282,10 @@ int main()
 			char string3[20];
 			for (int i = 0; i < 20; i++)
 			{
-				for (int j = 0; j < sizeof(string1); j++)
+				for (int j = 0; j < strlen(string1); j++)
 				{
 					char temp;
-					for (int k = 0; k < sizeof(string2); k++)
+					for (int k = 0; k < strlen(string2); k++)
 					{
 						if (string1[j] != string2[k])
 						{
