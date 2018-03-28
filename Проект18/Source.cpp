@@ -272,8 +272,43 @@ int main()
 		}
 		printf("\n");
 		break;
-				
 
+		case 15:
+			/*Заданы две строки. Построить новую строку, состоящую из символов, которые входят в первую строку,
+			но не входят во вторую.*/
+		{
+			char string1[] = "string one";
+			char string2[] = "string two";
+			char string3[20];
+			for (int i = 0; i < 20; i++)
+			{
+				for (int j = 0; j < sizeof(string1); j++)
+				{
+					char temp;
+					for (int k = 0; k < sizeof(string2); k++)
+					{
+						if (string1[j] != string2[k])
+						{
+							temp = string1[j];
+						}
+						else
+						{
+							temp = NULL;
+							break;
+						}
+					}
+					string3[i] = temp;
+					if (string3[i] != NULL)
+					{
+						i++;
+					}
+				}
+			}
+			printf("Новая строка:\t%s\n", string3);
+		}
+		
+		printf("\n");
+		break;
 		default: {printf("Задания с таким номером не существует\n"); }
 		}
 	} while (N > 0 && N < 15);
